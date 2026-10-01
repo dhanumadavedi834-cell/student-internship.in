@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Opportunities for Students</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">🎓 Student<span>Hub</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="auth-buttons">
+    <button class="btn btn-outline" id="loginBtn">Login</button>
+    <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">YOUR STUDENT OPPORTUNITY PORTAL</p>
+
+    <h1>
+      Discover opportunities.<br>
+      <span>Build your future.</span>
+    </h1>
+
+    <p class="hero-text">
+      Find internships, scholarships, courses and career opportunities
+      designed to help students grow.
+    </p>
+
+    <a class="btn btn-primary hero-btn" href="#opportunities">
+      Explore Opportunities →
+    </a>
+
+  </div>
+
+  <div class="hero-card">
+
+    <div class="hero-icon">🚀</div>
+
+    <h3>Start your journey</h3>
+
+    <p>
+      Join StudentHub and discover your next opportunity.
+    </p>
+
+    <button class="btn btn-dark" id="heroSignup">
+      Create Account
+    </button>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="opportunities">
+
+  <div class="section-heading">
+
+    <div>
+      <p class="eyebrow">LATEST OPPORTUNITIES</p>
+      <h2>Opportunities for you</h2>
+    </div>
+
+    <p>
+      Explore opportunities and take the next step in your career.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <article class="card">
+
+      <div class="card-icon blue">💻</div>
+
+      <span class="tag">INTERNSHIP</span>
+
+      <h3>Software Development Internship</h3>
+
+      <p>
+        Gain practical software development experience
+        and work on real-world projects.
+      </p>
+
+      <button class="card-btn"
+        data-title="Software Development Internship">
+        View Opportunity →
+      </button>
+
+    </article>
+
+
+    <article class="card">
+
+      <div class="card-icon green">🎓</div>
+
+      <span class="tag">SCHOLARSHIP</span>
+
+      <h3>Government Scholarship</h3>
+
+      <p>
+        Discover scholarship opportunities that can help
+        support your education.
+      </p>
+
+      <button class="card-btn"
+        data-title="Government Scholarship">
+        View Opportunity →
+      </button>
+
+    </article>
+
+
+    <article class="card">
+
+      <div class="card-icon purple">📊</div>
+
+      <span class="tag">COURSE</span>
+
+      <h3>Data Science Course</h3>
+
+      <p>
+        Build skills in data analysis, Python,
+        machine learning and modern data science.
+      </p>
+
+      <button class="card-btn"
+        data-title="Data Science Course">
+        View Opportunity →
+      </button>
+
+    </article>
+
+
+    <article class="card">
+
+      <div class="card-icon orange">⚙️</div>
+
+      <span class="tag">INTERNSHIP</span>
+
+      <h3>Engineering Internship</h3>
+
+      <p>
+        Explore engineering internship opportunities
+        and gain valuable industry experience.
+      </p>
+
+      <button class="card-btn"
+        data-title="Engineering Internship">
+        View Opportunity →
+      </button>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="why section" id="about">
+
+  <p class="eyebrow">WHY STUDENTHUB?</p>
+
+  <h2>Everything students need in one place.</h2>
+
+  <div class="features">
+
+    <div>
+      <strong>🔎</strong>
+      <h3>Find Opportunities</h3>
+      <p>
+        Discover internships, scholarships and courses.
+      </p>
+    </div>
+
+    <div>
+      <strong>🔐</strong>
+      <h3>Secure Account</h3>
+      <p>
+        Use Firebase Authentication to protect student accounts.
+      </p>
+    </div>
+
+    <div>
+      <strong>📱</strong>
+      <h3>Mobile Friendly</h3>
+      <p>
+        Access the portal from phones, tablets and computers.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div>
+    © 2026 StudentHub. Built for students.
+  </div>
+
+  <div>
+    Learn • Grow • Succeed
+  </div>
+
+</footer>
+
+
+<!-- LOGIN / SIGN UP -->
+
+<div class="modal hidden" id="authModal">
+
+  <div class="modal-box">
+
+    <button class="close" id="closeModal">×</button>
+
+    <p class="eyebrow" id="authEyebrow">
+      WELCOME BACK
+    </p>
+
+    <h2 id="authTitle">
+      Login
+    </h2>
+
+    <p id="authDescription">
+      Login to your StudentHub account.
+    </p>
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email address"
+      autocomplete="email"
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      autocomplete="current-password"
+    >
+
+    <button
+      class="btn btn-primary full"
+      id="authSubmit">
+      Login
+    </button>
+
+    <p class="switch">
+      Don't have an account?
+      <button id="switchAuth">
+        Sign Up
+      </button>
+    </p>
+
+    <p class="status" id="authStatus"></p>
+
+  </div>
+
+</div>
+
+
+<!-- OPPORTUNITY -->
+
+<div class="modal hidden" id="opportunityModal">
+
+  <div class="modal-box">
+
+    <button class="close" id="closeOpportunity">
+      ×
+    </button>
+
+    <p class="eyebrow">
+      OPPORTUNITY
+    </p>
+
+    <h2 id="opportunityTitle">
+      Opportunity
+    </h2>
+
+    <p id="opportunityText"></p>
+
+    <button
+      class="btn btn-primary full"
+      id="opportunitySignup">
+      Sign Up to Continue
+    </button>
+
+  </div>
+
+</div>
+
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
